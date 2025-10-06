@@ -7,5 +7,5 @@ RUN apt-get update && apt-get install -y build-essential git wget && rm -rf /var
 COPY server/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 COPY server /app
-EXPOSE 8000
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 58568
+CMD ["uvicorn", "server:app", "--host", "192.168.0.133", "--port", "58568"]
