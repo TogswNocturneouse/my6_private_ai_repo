@@ -1,0 +1,10 @@
+.PHONY: convert build docker push
+convert:
+	python scripts/convert.py --model $(MODEL) --out artifacts/converted.mlmodel
+
+build:
+	docker build -t my6app:latest server
+
+push:
+	docker tag my6app:latest ghcr.io/192.168.0.133/my6privateai:latest
+	docker push ghcr.io/192.168.0.133/my6privateai:latest
