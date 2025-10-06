@@ -6,5 +6,5 @@ build:
 	docker build -t my6app:latest server
 
 push:
-	docker tag my6app:latest ghcr.io/yourorg/my6privateai:latest
-	docker push ghcr.io/yourorg/my6privateai:latest
+	docker tag my6app:latest ghcr.io/192.168.0.134/my6privateai:latest
+	docker push ghcr.io/192.168.0.134/my6privateai:latest
